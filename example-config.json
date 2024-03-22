@@ -1,10 +1,10 @@
 {
     "app" : {
         "author" : "Muhamad Wildan Faz",
-        "port" : ":7000"
+        "port" : ":1323"
     },
     "database" : {
-        "mysql_dsn" : "root:secret@tcp(localhost:3306)/go-template?parseTime=true"
+        "postgresql" : "postgres://postgres:mysecretpassword@host.docker.internal:5432/cinema-ticket"
     },
     "jwt" : {
         "duration" : "1h",

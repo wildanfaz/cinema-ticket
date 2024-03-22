@@ -1,12 +1,18 @@
-# Go Template
+# Cinema Ticket
 
-Simple golang project template
+Cinema Ticket is an app used for booking movie ticket easily.
 
 ## Table of Contents
 
+- [About Me](#about-me)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Commands](#commands)
+- [Documentations](#documentations)
+
+## About Me
+
+Hello! I'm Muhamad Wildan Faz, a Junior Backend Developer who's deeply passionate about software development.
 
 ## Installation
 
@@ -36,13 +42,13 @@ Simple golang project template
 3. Clone the repository
 
     ```bash
-    git clone https://github.com/wildanfaz/go-template.git
+    git clone https://github.com/wildanfaz/cinema-ticket.git
     ```
 
 4. Change to the project directory
 
     ```bash
-    cd go-template
+    cd cinema-ticket
     ```
 
 ## Usage
@@ -52,6 +58,10 @@ Simple golang project template
     ```bash
     docker-compose up
     ```
+
+2. Open this [postman documentation](https://documenter.getpostman.com/view/22978251/2sA35Ba43C) to test the endpoints
+
+3. Check commands if there's a need to set the role to admin
 
 ## Commands
 
@@ -64,3 +74,31 @@ Simple golang project template
     ```bash
     make start
     ```
+
+3. Set role to admin
+    ```bash
+    make admin $(email) $(database-url)
+    ```
+
+    Example
+    ```bash
+    make admin email=example@mail.com database-url=postgres://postgres:mysecretpassword@localhost:5432/cinema-ticket
+    ```
+
+4. Add user balance
+    ```bash
+    make balance $(email) $(amount) $(database-url)
+    ```
+
+     Example
+    ```bash
+    make balance email=example@mail.com amount=1000000 database-url=postgres://postgres:mysecretpassword@localhost:5432/cinema-ticket
+    ```
+
+## Documentations
+
+1. [Postman](https://documenter.getpostman.com/view/22978251/2sA35Ba43C)
+
+2. [Database](https://dbdiagram.io/d/Cinema-Ticket-65fd5676ae072629ceb32d68)
+
+3. [Flowchart](https://drive.google.com/file/d/1TzVBYXffa7qyMmKkGvhGquNRMudZRAJ6/view?usp=sharing)

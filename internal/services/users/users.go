@@ -1,27 +1,30 @@
-package books
+package users
 
 import (
+	"github.com/labstack/echo/v4"
 	"github.com/sirupsen/logrus"
-	"github.com/wildanfaz/go-template/configs"
-	"github.com/wildanfaz/go-template/internal/repositories"
+	"github.com/wildanfaz/cinema-ticket/configs"
+	"github.com/wildanfaz/cinema-ticket/internal/repositories"
 )
 
 type ImplementServices struct {
-	books  repositories.Books
+	users  repositories.Users
 	log    *logrus.Logger
 	config *configs.Config
 }
 
 type Services interface {
+	Register(c echo.Context) error
+	Login(c echo.Context) error
 }
 
 func New(
-	books repositories.Books,
+	users repositories.Users,
 	log *logrus.Logger,
 	config *configs.Config,
 ) Services {
 	return &ImplementServices{
-		books:  books,
+		users:  users,
 		log:    log,
 		config: config,
 	}

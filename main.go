@@ -4,7 +4,7 @@ import (
 	"context"
 
 	_ "github.com/joho/godotenv/autoload"
-	"github.com/wildanfaz/go-template/cmd"
+	"github.com/wildanfaz/cinema-ticket/cmd"
 )
 
 func main() {

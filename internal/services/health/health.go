@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo/v4"
-	"github.com/wildanfaz/go-template/internal/helpers"
+	"github.com/wildanfaz/cinema-ticket/internal/helpers"
 )
 
 func HealthCheck(c echo.Context) error {

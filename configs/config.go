@@ -11,7 +11,7 @@ type Config struct {
 	AppPort      string
 	JWTSecretKey []byte
 	JWTDuration  time.Duration
-	DatabaseDSN  string
+	DatabaseURL  string
 }
 
 func InitConfig() *Config {
@@ -29,6 +29,6 @@ func InitConfig() *Config {
 		AppPort:      config.GetString("app.port"),
 		JWTSecretKey: []byte(config.GetString("jwt.secret_key")),
 		JWTDuration:  config.GetDuration("jwt.duration"),
-		DatabaseDSN:  config.GetString("database.mysql_dsn"),
+		DatabaseURL:  config.GetString("database.postgresql"),
 	}
 }
